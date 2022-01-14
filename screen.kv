@@ -1,0 +1,35 @@
+GridLayout:
+	cols: 2
+
+	Label:
+		text: 'First number:'
+	TextInput:
+		id: numberA
+
+	Label:
+		text: 'Second number:'
+	TextInput:
+		id: numberB
+
+	Button:
+		text: '+'
+		on_press:			
+			app.sum(app.getNumberA(), app.getNumberB())
+	Button:
+		text: '-'
+		on_press:
+			app.sub(app.getNumberA(), app.getNumberB())
+	Button:
+		text: '*'
+		on_press:
+			app.mult(app.getNumberA(), app.getNumberB())
+	Button:
+		text: '/'
+		on_press:
+			app.div(app.getNumberA(), app.getNumberB())
+	Label:
+		text: "Result:"
+
+	Label:
+		id: result
+		text: ""
