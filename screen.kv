@@ -1,35 +1,65 @@
 GridLayout:
 	cols: 2
+	spacing: 25
+	padding: 12.5
 
 	Label:
 		text: 'First number:'
+		size_hint: (.2, None)
+		height: 30
 	TextInput:
 		id: numberA
+		multiline: False
+		size_hint: (.2, None)
+		height: 30
+		text: '0'
 
 	Label:
 		text: 'Second number:'
+		size_hint: (.2, None)
+		height: 30
 	TextInput:
 		id: numberB
+		multiline: False
+		size_hint: (.2, None)
+		height: 30
+		text: '0'
 
 	Button:
 		text: '+'
 		on_press:			
 			app.sum(app.getNumberA(), app.getNumberB())
+		size_hint: (None, None)
+		height: 100
+		width: 100
 	Button:
 		text: '-'
 		on_press:
 			app.sub(app.getNumberA(), app.getNumberB())
+		size_hint: (None, None)
+		height: 100
+		width: 100
 	Button:
 		text: '*'
 		on_press:
 			app.mult(app.getNumberA(), app.getNumberB())
+		size_hint: (None, None)
+		height: 100
+		width: 100
 	Button:
 		text: '/'
 		on_press:
 			app.div(app.getNumberA(), app.getNumberB())
+		size_hint: (None, None)
+		height: 100
+		width: 100
 	Label:
 		text: "Result:"
+		size_hint: (.2, None)
+		height: 30
 
 	Label:
 		id: result
 		text: ""
+		size_hint: (.2, None)
+		height: 30

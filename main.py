@@ -7,6 +7,10 @@
 from kivy.app import App
 from kivy.lang import Builder
 
+# Configura o tamanho da tela
+from kivy.core.window import Window
+Window.size = (250, 425)
+
 GUI = Builder.load_file("screen.kv") # Instancia a interface a partir do arquivo .kv
 
 class pyCalc(App): # Cria a aplicação através da classe
