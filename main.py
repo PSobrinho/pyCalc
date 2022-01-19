@@ -9,13 +9,17 @@ from kivy.lang import Builder
 
 # Configura o tamanho da tela
 from kivy.core.window import Window
-Window.size = (250, 425)
+Window.size = (250, 525)
 
 GUI = Builder.load_file("screen.kv") # Instancia a interface a partir do arquivo .kv
 
 class pyCalc(App): # Cria a aplicação através da classe
 	def build(self):
 		return GUI # Carrega a interface
+
+	def clear(self):
+		self.root.ids['numberA'].text = '0'
+		self.root.ids['numberB'].text = '0'
 
 	def getNumberA(self):
 		# Recupera o dado de entrada no campo 'numberA'

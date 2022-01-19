@@ -13,6 +13,7 @@ GridLayout:
 		size_hint: (.2, None)
 		height: 30
 		text: '0'
+		input_filter: 'float'
 
 	Label:
 		text: 'Second number:'
@@ -24,6 +25,7 @@ GridLayout:
 		size_hint: (.2, None)
 		height: 30
 		text: '0'
+		input_filter: 'float'
 
 	Button:
 		text: '+'
@@ -63,3 +65,15 @@ GridLayout:
 		text: ""
 		size_hint: (.2, None)
 		height: 30
+
+	Label:
+		text: ""
+		size_hint: (.2, None)
+		height: 30
+	Button:
+		text: 'Limpar'
+		on_press:
+			app.clear()
+		size_hint: (None, None)
+		height: 50
+		width: 100
